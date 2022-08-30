@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "143833793997",
+    "project_id": "vasudevdemo",
+    "storage_bucket": "vasudevdemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143833793997:android:9f4ed29fd8841fcbf93084",
+        "android_client_info": {
+          "package_name": "com.example.attendanceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143833793997-jac0157s2i2tf2k7lclhpkf1b6s42l0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGaqE-d-RKy3Z5b3mwivkHrtPwpiauGpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143833793997-jac0157s2i2tf2k7lclhpkf1b6s42l0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
