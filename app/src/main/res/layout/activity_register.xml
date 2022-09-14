@@ -1,66 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
-    >
+    tools:context=".RegisterActivity">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="130dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Create new Account"
+        android:textColor="#EA4C83"
+        android:textSize="70dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="80dp"
-            android:layout_marginBottom="30dp"
-            android:text="Register"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/nameLayout">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:hint="Email"
-            android:textSize="20dp"
-            android:id="@+id/email"
-            />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name"
+        android:id="@+id/name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/nameLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/emailLayout"
+        android:layout_marginTop="10dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="email"
+        android:id="@+id/email"
+        android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_below="@id/emailLayout"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:id="@+id/passLayout"
+    android:layout_marginTop="10dp"
+    app:passwordToggleEnabled="true"
+    app:passwordToggleTint="#000">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textSize="20dp"
-            android:id="@+id/password"
-            />
+<EditText
+    android:id="@+id/password"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="password"
+    android:inputType="textPassword"/>
+</com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            android:text="Submit"
-            android:textSize="20dp"
-            android:id="@+id/submit"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Already have account? Login"
-            android:textSize="15dp"
-            android:id="@+id/login"
-            />
-
-    </LinearLayout>
+<Button
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/submit"
+android:layout_below="@id/passLayout"
+android:text="Register"
+android:textColor="#fff"
+android:background="#3BB5EC"
+android:layout_marginTop="20dp"
+android:layout_marginLeft="30dp"
+android:layout_marginRight="30dp"/>
 
 
-</ScrollView>
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/login"
+android:text="Already register! Login here"
+android:gravity="center_horizontal"
+android:layout_below="@id/submit"
+android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>

@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
-  EditText emailBox, pwdBox;
+  EditText emailBox, pwdBox,nameBox;
   Button register;
   TextView login;
   String email, password;
@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_register);
-
+    nameBox=findViewById(R.id.name);
     emailBox = findViewById(R.id.email);
     pwdBox = findViewById(R.id.password);
     register = findViewById(R.id.submit);
